@@ -1,12 +1,13 @@
 version: 2.1
 jobs:
-  build:
+  e2eTests:
     docker:
       - image: mcr.microsoft.com/playwright:v1.22.0-focal
     environment:
       NODE_ENV: development # Needed if playwright is in `devDependencies`
     steps:
       - checkout # check out the code in the project directory
-      - run: | 
-          npm install
-          npm run test
+      - run: npm install
+      - run: npm run test
+      - store_artifacts:
+          path: /playwright-report
