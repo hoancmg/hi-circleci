@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  e2eTests:
+  e2e-tests:
     docker:
       - image: mcr.microsoft.com/playwright:v1.22.0-focal
     environment:
@@ -9,5 +9,6 @@ jobs:
       - checkout # check out the code in the project directory
       - run: npm install
       - run: npm run test
+      - run: npm run report
       - store_artifacts:
-        path: /playwright-report
+          path: /playwright-report
