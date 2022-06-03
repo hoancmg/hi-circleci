@@ -10,4 +10,4 @@ jobs:
       - run: npm install
       - run: npm run test
       - store_artifacts:
-          path: /playwright-report
+        path: /playwright-report
