@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: mcr.microsoft.com/playwright:v1.22.0-
+      - image: mcr.microsoft.com/playwright:v1.22.0-focal
     environment:
       NODE_ENV: development # Needed if playwright is in `devDependencies`
     steps:
