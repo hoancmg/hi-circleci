@@ -9,6 +9,5 @@ jobs:
       - checkout # check out the code in the project directory
       - run: npm install
       - run: npm run test
-      - run: npm run report
       - store_artifacts:
           path: playwright-report
